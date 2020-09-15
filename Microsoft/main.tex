@@ -1,0 +1,189 @@
+\documentclass[11pt]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+%\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+%\usepackage{listings, xcolor}
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Madrid}
+
+\title[Presentación]{\bf\Huge Interacción Humano Computador}
+
+
+\author[Group-3]
+{
+	Jimy Gabriel Revilla Tellez \\
+	Carlos Bryan Gallegos Batallanos \\
+	Rodrigo Sebastián Huaman Maqque \\
+	Jordy Pedro Valencia Jara 
+}
+\institute[UNSA]
+{
+% 
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+}
+%\logo{\includegraphics[width=3.0cm]{img/logo_unsa.jpg}}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Content}
+\tableofcontents
+\end{frame}
+
+
+\section{Microsoft}
+\begin{frame}
+\frametitle{Microsoft}
+
+Fue fundada por Paul Allen y Bill Gates el {\bf 4 de abril de 1975} para desarrollar y comercializar intérpretes de BASIC para el Altair 8000, un microordenador diseñado en 1974 y basado en el procesador {\bf Intel 8080}.\\
+\begin{figure}
+    \centering
+    \includegraphics[width=5.0cm]{micro.png}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+
+\section{Microsoft Divisions}
+\begin{frame}
+\frametitle{Divisions}
+\begin{itemize}
+    \item {\bf Office Experience Group}  Microsoft se Centra en el desarrollo de aplicaciones para gestiones empresariales.
+    \item {\bf Windows and Devices} encargada del producto estrella Windows y desarrollador de Microsoft Visual Studio.
+    \item {\bf Microsoft Mobile} Estaba dedicado al diseño y fabricación de teléfonos móbiles hasta el año 2017. 
+    \item {\bf Microsoft Press} Esta encargada en la publicación de libros. 
+\end{itemize}
+\end{frame}
+
+
+\section{Apple Computer}
+\begin{frame}
+\frametitle{Apple Computer}
+
+\begin{itemize}
+    \item Un 24 de enero de 1984, se presentaba la Macintosh. La época dorada de equipos como el Apple II, el mundo Mac se plantaba como una revolución tecnológica que hasta hoy día sigue prevaleciendo.
+    
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=6.0cm]{img2_Apple.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\section{Apple Computer}
+\begin{frame}
+\frametitle{Apple Computer}
+
+\begin{itemize}
+    \item Esta revolución tiene sus inicios desde los primeros equipos de Apple que introdujeron al mercado algo llamado “GUI” o “Graphical user interface / Interfaz gráfica de usuario”, como el Apple Lisa en 1983 y el Macintosh en 1984 con una versión mejorada de esta interfaz gráfica. La idea fue sustituir la línea de comandos con la que se trabajaba anteriormente en lo denominado “PC” (Personal Computer) por IBM y crear una interfaz gráfica donde el usuario pudiera interactuar con la máquina de la misma manera que el cerebro humano funciona.
+    
+\end{itemize}
+\end{frame}
+
+\section{Apple Computer}
+\begin{frame}
+\frametitle{Apple Computer}
+\begin{itemize}
+    \item El Macintosh 128K (llamado así por su capacidad de memoria RAM) fue el primer computador personal exitoso en el mercado (por poco tiempo) que poseía una GUI (Interfaz gráfica de usuario) y un mouse (ratón) sustituyendo por completo esa línea de comandos que desde Apple consideraban “obsoleta” y “nada amigable” para el usuario.
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=5.0cm]{img1_Apple.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\section{Oracle}
+\begin{frame}
+\frametitle{Oracle}
+\begin{itemize}
+    \item Compañía especializada en el desarrollo de soluciones de nube y locales, teniendo su sede en Redwood City en el estado de california.
+    \item Los ingenieros Larry Ellison, Ed Oates y Bob Miner fundan en 1977 una empresa de consultoría llamada Software Development Laboratories (SDL).
+    \item En 1982  cambia de nombre a Relational Software Incorporated (RSI). La compañía busca tener un producto que fuese compatible con el SQL de IBM, y además enfocarse en un mercado de las minicomputadoras.
+    \item En 1984 RSI cambia su nombre a Oracle Systems Corporation, y poco después se acorta al actual "Oracle Corporation".
+\end{itemize}
+\end{frame}
+
+\section{Oracle}
+\begin{frame}
+\frametitle{Oracle}
+\begin{itemize}
+    \item El siguiente año empieza a comercializar Oracle V3, agregando el manejo de transacciones a través de las instrucciones COMMIT y ROLLBACK. De hecho, el producto es recodificado en C lo que permite expandir las plataformas de ejecución para incluir los entornos Unix, cuando hasta aquí era sólo sobre Digital VAX/VMS.
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=5.0cm]{oracle.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+
+\section{References}
+
+\begin{frame}
+\frametitle{References}
+\begin{itemize}
+\item \href{https://www.microsoft.com/}{Microsoft Page}
+\item \href{https://es.wikipedia.org/wiki/Microsoft}{Microsoft Corporation}
+\item \href{https://es.wikipedia.org/wiki/Historia_de_Microsoft}{Microsoft History}
+\item \href{https://es.wikipedia.org/wiki/Apple}{Apple Computer}
+\item \href{https://es.wikipedia.org/wiki/Oracle_Corporation#Historia}{Oracle Corporation}
+\end{itemize}
+\end{frame}
+
+\end{document}
