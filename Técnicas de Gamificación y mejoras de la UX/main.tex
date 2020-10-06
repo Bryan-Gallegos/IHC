@@ -1,0 +1,490 @@
+\documentclass[11pt]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+%\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+%\usepackage{listings, xcolor}
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Madrid}
+
+\title[Presentación]{\bf\Huge Técnicas de Gamificación y mejoras de la UX}
+
+
+\author[Group-3]
+{
+	Jimy Gabriel Revilla Tellez \\
+	Carlos Bryan Gallegos Batallanos \\
+	Rodrigo Sebastián Huaman Maqque \\
+	Jordy Pedro Valencia Jara 
+}
+\institute[UNSA]
+{
+% 
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+}
+%\logo{\includegraphics[width=3.0cm]{img/logo_unsa.jpg}}
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Content}
+\tableofcontents
+\end{frame}
+
+
+\section{Calidad de Sistemas Interactivos}
+\begin{frame}
+\frametitle{Calidad de Sistemas Interactivos}
+\begin{itemize}
+    \item Podemos medirlo desde diferentes principios
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=12.0cm]{mapaUtilidad.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+
+\section{Experiencia de Usuario}
+\begin{frame}
+\frametitle{Diseño emocional}
+\begin{itemize}
+    \item Debemos buscar establecer una relacion emocional con los objetos
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=8.0cm]{imagenDiseñoEmocional.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+
+\section{Juegos}
+\begin{frame}
+\begin{itemize}
+    \item Se han diseñado desde siempre para generar una experiencia de los mas divertida en el usuario
+    \item "Los juegos son divertidos y atraen a jugadores no porque sean juegos, sino porque estan diseñados por gente que comprende qué es lo que hace que los jugadores se divierten y obtengan placer"
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=7.0cm]{imagenJuego.jpg}
+    \label{fig:my_label}
+\end{figure}
+\frametitle{El Juego}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Circulo Magico}
+\begin{itemize}
+    \item Todo lo que se da en el juego queda en el juego.
+    \item Es un espacio separado. ficticio, reglado por normas especiales y ajeno a nuestra realidad.
+    \item "El juego no tiene efecto en la vida real"
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esto no es del todo cierto ...}
+\begin{itemize}
+    \item Nostros podemos llevar situaciones del mundo real al juego...haciendolo mas divertido.
+    \item Esto puede ayudarnos a llevar algunas situaciones un tanto tediosas.
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=6.0cm]{imagenJuegoNiños.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{¿A donde vamos con todo esto?}
+Los juegos son un importante caso de exito como:
+\begin{itemize}
+    \item La creacion de un "engagement".
+    \item Una buena interaccion con el usuario.
+    \item Altos niveles de motivacion.
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=7.0cm]{imagenExperiencia.png}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\section{Gamificación}
+\begin{frame}
+\frametitle{Concepto}
+\begin{itemize}
+    \item Es la aplicación de los elementos propios de los juegos.
+    \item Tiene el fin de conseguir que las personas adopten ciertos comportamientos deseados.
+    \item También se puede gamificar un producto, un servicio o aplicación.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplos}
+\begin{itemize}
+    \item {\bf Kahoot!} Permite crear salones virtuales para trabajar las preguntas y claves de acceso a los estudiantes.
+    \begin{figure}
+    \includegraphics[width=4.0cm]{kahoot.png}
+    \label{fig:my_label}
+\end{figure}
+    \item {\bf Socrative} Aplicación que permite generar juegos, desde estilo trivia hasta más complejos.
+    \begin{figure}
+    \includegraphics[width=4.0cm]{003f89b3747f076f93461b16c97e7ff1.jpg}
+    \label{fig:my_label}
+\end{figure}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Elementos de juego}
+\begin{itemize}
+    \item {\bf Dinámica:} Experiencias que el diseñador quiere qincorporar al juego, como la progresión.
+    \item {\bf Mecánicas:} Que se necesita para que el diseñador pueda obtener las experiencias, como son los desafíos, logros o recompensas.
+    \item {\bf Componentes:} Están implementados en las partes mecánicas del elemento del juego, como son los emblemas, niveles, misiones.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tipos de Jugadores}
+\begin{itemize}
+    \item  Ambiciosos
+    \item Triunfadores
+    \item Sociables
+    \item Exploradores
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=7.0cm]{imagen_2020-10-05_225833.png}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{¿Qué nos motiva a jugar?}
+La motivación es un impulso que nos permite tener cierta continuidad en la actividad que estamos realizando.\\
+\begin{itemize}
+    \item {\bf Morivación intrínseca: } La que proviene de nuestro interior. No necesitamos motivaciones extras.
+    \item {\bf Motivación extrínseca: } Es la que esta asociada con un objetivo final.
+    \item {\bf Motivación afectiva: } Está relacionada a las emociones.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Teoria de Flujo}
+\begin{itemize}
+    \item Un estado mental o una experiecia "tan satisfactoria" que no queremos salir de ella incluso aunque sea peligroso o dificil.
+    \item Sorpresa continua.
+    \item Equilibrio entre habilidad y desafio.
+    \begin{figure}
+        \includegraphics[width=5.0cm]{usuario.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Niveles}
+\begin{itemize}
+    \item Fantasia y curiosidad.
+    \item  Motivar a los jugadores y seguir jugando.
+    \item Sensasion de progreso.
+    \begin{figure}
+        \includegraphics[width=6.0cm]{niveles.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Ciclos de Accion y Realimentacion}
+\begin{itemize}
+    \item Dentro del juego el usuario 
+    tiene una serie de acciones a realizar.
+    \begin{figure}
+        \includegraphics[width=8.5cm]{Ciclo.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Sistemas de puntuación y recompensa}
+\begin{itemize}
+    \item Es una forma facil de introducir gamificacion
+    \item Actividades con sistemas PBL
+    \item Una gamificacion intrinseca
+    \begin{figure}
+        \includegraphics[width=6.0cm]{PBL.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Sensacion de progreso}
+\begin{itemize}
+    \item Indicadores de progreso y medallas o insignias.
+    \item Indicadores de progresos tematicos.
+    \begin{figure}
+        \includegraphics[width=5.0cm]{premio.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Recompensas virtuales o reales}
+\begin{itemize}
+    \item Tiene una gran importancia ya que motiva al jugador.
+   
+    \begin{figure}
+        \includegraphics[width=6.0cm]{recompensa.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{La realimentacion}
+\begin{itemize}
+    \item Positiva.
+    \item Divertida
+    \item Adecuada.
+    \begin{figure}
+        \includegraphics[width=5.0cm]{realimentacion.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{La historia y narrativa}
+\begin{itemize}
+    \item Contar historias atrae la atencion da sentido y genera una grn experiencia.
+    \item Realizar un viaje es una gran aventura.
+    \item Viaje del heroe.
+   
+    \begin{figure}
+        \includegraphics[width=5.0cm]{Historia.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Onboarding}
+\begin{itemize}
+    \item Atraer al Usuario
+    \item el usuario conocera lo que debe hacer la aplicacion 
+     \begin{figure}
+        \includegraphics[width=8.0cm]{onboarding.png}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Inmerse}
+\begin{itemize}
+    \item debemos usar funciones progresivas 
+    \item Uso de tutoriales
+    \item Mantener entretenido al usuario
+     \begin{figure}
+        \includegraphics[width=5.0cm]{inmerse.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Diseño basado en mapas de experiencia}
+\begin{itemize}
+    \item se involucra con la narrativa
+     \begin{figure}
+        \includegraphics[width=8.0cm]{experiencia.png}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{User Engagement}
+\begin{itemize}
+    \item Atrapar a los usuarios
+    \item que vuelvan,que nos recuerden,que nos recomienden
+    \begin{figure}
+        \includegraphics[width=9.0cm]{retencion.png}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Retencion}
+\begin{itemize}
+    \item Saber como retener a los usuarios
+     \begin{figure}
+        \includegraphics[width=9.0cm]{retencion.png}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Incluir restricciones}
+\begin{itemize}
+    \item Las restricciones suelen generar motivacion al jugador 
+    \item Las personas queremos lo que no tenemos 
+    \item El usuario solo puede hacer algo en la aplicacion solo por hoy
+    \item dar funcionabilidad a determinados usuarios
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Libertad}
+\begin{itemize}
+    \item Dar control al usuario sobre donde estamos y a donde queremos ir 
+    \begin{figure}
+        \includegraphics[width=10.0cm]{libertad.jpg}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Emociones}
+\begin{itemize}
+    \item Añadir elementos que generen emociones (Sorpresa, Curiosidad, Entusiasmo, Admiración, Diversión, Frustración, Enojo, Placer, Satisfacción).
+    \begin{figure}
+        \includegraphics[width=8.0cm]{emociones.jpg}
+        \label{fig:my_label}
+    \end{figure}
+    
+\end{itemize}
+\end{frame} 
+
+
+\begin{frame}
+\frametitle{Diseño de gamificacion}
+\begin{itemize}
+    \begin{figure}
+        \includegraphics[width=10cm]{gamificacion.png}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Contenido}
+\begin{itemize}
+    \item No se puede aumentar el valor intrinseco mediante la adicion de mecanicas de juego.
+\end{itemize}
+\end{frame}
+
+
+
+\section{References}
+\begin{frame}
+
+\frametitle{References}
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=v23kdMadKQA}{Video}
+\item \href{https://www.evirtualplus.com/herramientas-de-gamificacion-para-universitarios/}{Ejemplos de Gamificación}
+\end{itemize}
+\end{frame}
+
+\end{document}
