@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'bienvenido.dart';
+import 'home_page.dart';
+import 'urgencia.dart';
+import 'fundamental.dart';
+import 'dia.dart';
+import 'acontecimiento.dart';
+import 'cabala.dart';
+import 'second_page.dart';
+
 void main() {
   runApp(Login());
 }
@@ -8,11 +15,19 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Estudio Numerologico",
-      theme:ThemeData(primarySwatch: Colors.purple),
-      home: Pantalla(),
+      routes:{
+        "/": (BuildContext context) => MyHomePage(),
+        "/second": (BuildContext context) => SecondPage(),
+        "/urgencia": (BuildContext context) => UrgenciaPage(),
+        "/fundamental": (BuildContext context) => FundamentalPage(),
+        "/dia": (BuildContext context) => DiaPage(),
+        "/acontecimiento": (BuildContext context) => AcontecimientoPage(),
+        "/cabala": (BuildContext context) => CabalaPage(),
+      },
     );
   }
 }
+/*
 class Pantalla extends StatefulWidget {
   @override
   _PantallaState createState() => _PantallaState();
@@ -132,6 +147,8 @@ class _PantallaState extends State<Pantalla> {
                     }
                     print(tfundamental);//imprime número de tónica fundamental
                     DateTime now=DateTime.now();
+                    String hoy=now.toString();
+                    int hora=int.parse(hoy.substring(11,13));
                     int year;
                     int month;
                     int day;
@@ -171,6 +188,7 @@ class _PantallaState extends State<Pantalla> {
                       tdia=int.parse(td.substring(0,1))+int.parse(td.substring(1,td.length));
                     }
                     print(tdia);//imprime tu número de tónica del día
+                    print(hora);//imprime hora exacta de la consulta
                     if(nom!=''&& fec!=''){
                       Navigator.of(context).push(MaterialPageRoute<Null>(
                         builder: (BuildContext context){
@@ -215,3 +233,4 @@ class _PantallaState extends State<Pantalla> {
       );
   }
 }
+*/
