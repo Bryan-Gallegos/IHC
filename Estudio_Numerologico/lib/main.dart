@@ -131,7 +131,41 @@ class _PantallaState extends State<Pantalla> {
                       tfundamental=int.parse(dTF.substring(0,1))+int.parse(dTF.substring(1,dTF.length));
                     }
                     print(tfundamental);//imprime número de tónica fundamental
-                    int tdia=uiinterior+tfundamental;
+                    DateTime now=DateTime.now();
+                    int year;
+                    int month;
+                    int day;
+                    int tdia=0;
+                    int ysum=0;
+                    DateTime date=new DateTime(year=now.year,month=now.month,day=now.day);
+                    if(day>=10){
+                      String d=day.toString();
+                      for(var i=0;i<d.length;i++){
+                        tdia+=int.parse(d.substring(i,i+1));
+                      }
+                    }else{
+                      tdia+=day;
+                    }
+                    if(month>=10){
+                      String m=month.toString();
+                      for(var i=0;i<m.length;i++){
+                        tdia+=int.parse(m.substring(i,i+1));
+                      }
+                    }else{
+                      tdia+=month;
+                    }
+                    String y=year.toString();
+                    for(var i=0;i<y.length;i++){
+                      ysum+=int.parse(y.substring(i,i+1));
+                    }
+                    if(ysum>=10){
+                      String ysum1=ysum.toString();
+                      tdia+=int.parse(ysum1.substring(0,1));
+                      tdia+=int.parse(ysum1.substring(1,ysum1.length));
+                    }else{
+                      tdia+=ysum;
+                    }
+                    tdia+=tfundamental;
                     if(tdia>=10){
                       String td=tdia.toString();
                       tdia=int.parse(td.substring(0,1))+int.parse(td.substring(1,td.length));
