@@ -1,4 +1,4 @@
-# minota
+# Estudio Numerologico
 
 My Application
 
