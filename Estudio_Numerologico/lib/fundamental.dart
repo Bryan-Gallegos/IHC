@@ -5,12 +5,25 @@ String dateValue;
 int urgencia;
 int fun;
 var list=new List(3);
+var textos=new List(9);
+var texto;
+
 class FundamentalPage extends StatelessWidget {
   const FundamentalPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     FundamentalPageArguments args = ModalRoute.of(context).settings.arguments;
+    textos[0]='que trabajar con mucha voluntad, con ideas originales, ser emprendedor.';
+    textos[1]='aprender a asociarse con los demás, escuchar opiniones contrarias sin enojarse, desarrollar la imaginación creadora.';
+    textos[2]='trabajar con arte y belleza en todo lo que haga, en el vestir, en el hablar.';
+    textos[3]='poner las bases firmes en sus proyectos y trabajos.';
+    textos[4]='ver el pro y el contra de todo lo que se proponga.';
+    textos[5]='decisivo y poner cariño a lo que haga.';
+    textos[6]='poner mucho empeño en todo lo que haga.';
+    textos[7]='ser muy paciente, saber esperar.';
+    textos[8]='ser generosa y genial, de preferencia trabajar independientemente.';
+
     nameValue=args.name;
     dateValue=args.date;
     urgencia=args.urgencia;
@@ -63,6 +76,38 @@ class FundamentalPage extends StatelessWidget {
       String dTF=fun.toString();
       fun=int.parse(dTF.substring(0,1))+int.parse(dTF.substring(1,dTF.length));
     }
+
+    switch(fun){
+      case 1:
+        texto=textos[0];
+        break;
+      case 2:
+        texto=textos[1];
+        break;
+      case 3:
+        texto=textos[2];
+        break;
+      case 4:
+        texto=textos[3];
+        break;
+      case 5:
+        texto=textos[4];
+        break;
+      case 6:
+        texto=textos[5];
+        break;
+      case 7:
+        texto=textos[6];
+        break;
+      case 8:
+        texto=textos[7];
+        break;
+      case 9:
+        texto=textos[8];
+        break;
+    }
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Tónica Fundamental"),
@@ -89,7 +134,7 @@ class FundamentalPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(20),
               child: Text(
-                'La Tónica Fundamental, es en lo que tenemos que trabajar para triunfar en la vida.\n'+'Este número indica que la persona tiene ',
+                'La Tónica Fundamental, es en lo que tenemos que trabajar para triunfar en la vida.\n'+'Este número indica que la persona tiene '+texto,
                 style: TextStyle(
                   fontSize: 30,
                   fontFamily: 'rBold'

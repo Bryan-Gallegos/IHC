@@ -3,6 +3,8 @@ import 'fundamental.dart';
 int urgencia=0;
 String nameValue;
 String dateValue;
+var textos=new List(9);
+var texto;
 
 class UrgenciaPage extends StatelessWidget {
   const UrgenciaPage({Key key}) : super(key: key);
@@ -10,6 +12,17 @@ class UrgenciaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     UrgenciaPageArguments args = ModalRoute.of(context).settings.arguments;
+
+    textos[0]='emprendedora, original, con voluntad.';
+    textos[1]='sociable, con imagincación.';
+    textos[2]='creativa, con arte y belleza.';
+    textos[3]='firme, sólida.';
+    textos[4]='razonativa, con rigor, propensa al aprendizaje';
+    textos[5]='cariñosa, indecisa.';
+    textos[6]='tendiente a luchar.';
+    textos[7]='paciente.';
+    textos[8]='generosa, con ideas geniales, independiente.';
+
     nameValue=args.name;
     dateValue=args.date;
     int day=int.parse(args.date.substring(0,1))+int.parse(args.date.substring(1,2));
@@ -40,6 +53,35 @@ class UrgenciaPage extends StatelessWidget {
       String u=urgencia.toString();
       urgencia=int.parse(u.substring(0,1))+int.parse(u.substring(1,u.length));
     }
+    switch(urgencia){
+      case 1:
+        texto=textos[0];
+        break;
+      case 2:
+        texto=textos[1];
+        break;
+      case 3:
+        texto=textos[2];
+        break;
+      case 4:
+        texto=textos[3];
+        break;
+      case 5:
+        texto=textos[4];
+        break;
+      case 6:
+        texto=textos[5];
+        break;
+      case 7:
+        texto=textos[6];
+        break;
+      case 8:
+        texto=textos[7];
+        break;
+      case 9:
+        texto=textos[8];
+        break;
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Urgencia Interior"),
@@ -66,7 +108,7 @@ class UrgenciaPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(20),
               child: Text(
-                'La urgencia interior, es cómo tendemos a ser, como un signo zodiacal pero numérico.\n'+'Este número hace a la persona',
+                'La urgencia interior, es cómo tendemos a ser, como un signo zodiacal pero numérico.\n'+'Este número hace a la persona '+texto,
                 style: TextStyle(
                   fontSize: 30,
                   fontFamily: 'rBold'

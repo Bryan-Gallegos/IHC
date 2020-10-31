@@ -20,9 +20,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Zodiaco"),
+        title: Text("Estudio Numerologico"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,6 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
             key: formKey,
             child: ListView(
               children: <Widget>[
+                Container(
+                  width: 400,
+                  height: 400,
+                  child: Image.asset('assets/images/Logo1.png'),
+                ),
                 TextFormField(
                   controller: nameController,
                   decoration: InputDecoration(labelText: "Nombre Completo"),
