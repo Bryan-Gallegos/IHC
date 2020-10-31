@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:minota/urgencia.dart';
+import 'urgencia.dart';
 import 'acontecimiento.dart';
 String nameValue;
 String dateValue;
