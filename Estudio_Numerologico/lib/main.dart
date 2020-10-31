@@ -5,7 +5,7 @@ import 'fundamental.dart';
 import 'dia.dart';
 import 'acontecimiento.dart';
 import 'cabala.dart';
-import 'second_page.dart';
+
 
 void main() {
   runApp(Login());
@@ -17,7 +17,6 @@ class Login extends StatelessWidget {
       title: "Estudio Numerologico",
       routes:{
         "/": (BuildContext context) => MyHomePage(),
-        "/second": (BuildContext context) => SecondPage(),
         "/urgencia": (BuildContext context) => UrgenciaPage(),
         "/fundamental": (BuildContext context) => FundamentalPage(),
         "/dia": (BuildContext context) => DiaPage(),

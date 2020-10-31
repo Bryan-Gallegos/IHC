@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-
+import 'fundamental.dart';
 int urgencia=0;
+String nameValue;
+String dateValue;
+
 class UrgenciaPage extends StatelessWidget {
   const UrgenciaPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     UrgenciaPageArguments args = ModalRoute.of(context).settings.arguments;
+    nameValue=args.name;
+    dateValue=args.date;
     int day=int.parse(args.date.substring(0,1))+int.parse(args.date.substring(1,2));
     int month=int.parse(args.date.substring(3,4))+int.parse(args.date.substring(4,5));
     int year=int.parse(args.date.substring(6,7))+int.parse(args.date.substring(7,8))+int.parse(args.date.substring(8,9))+int.parse(args.date.substring(9,10));
@@ -68,6 +73,12 @@ class UrgenciaPage extends StatelessWidget {
                 ),
               ),
             ),
+            RaisedButton(
+              child: Text("Ver Tónica Fundamental"),
+              onPressed: () {
+                _showFundamentalPage(context);
+              },
+            ),
           ],
         ),
       ),
@@ -79,4 +90,10 @@ class UrgenciaPageArguments {
   String name;
   String date;
   UrgenciaPageArguments({this.name, this.date});
+}
+_showFundamentalPage(BuildContext context){
+
+    Navigator.of(context).pushNamed("/fundamental",
+        arguments: FundamentalPageArguments(name: nameValue, date: dateValue, urgencia: urgencia));
+
 }

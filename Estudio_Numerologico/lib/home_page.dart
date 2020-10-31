@@ -4,7 +4,6 @@ import 'fundamental.dart';
 import 'dia.dart';
 import 'acontecimiento.dart';
 import 'cabala.dart';
-import 'second_page.dart';
 
 String nameValue;
 String dateValue;
@@ -73,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
 _showSecondPage(BuildContext context) {
   if (formKey.currentState.validate()) {
     formKey.currentState.save();
-    Navigator.of(context).pushNamed("/second",
-        arguments: SecondPageArguments(name: nameValue, date: dateValue));
+    Navigator.of(context).pushNamed("/urgencia",
+        arguments: UrgenciaPageArguments(name: nameValue, date: dateValue));
   }
 }
